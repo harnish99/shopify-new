@@ -1,9 +1,7 @@
-name: Deploy extensions
-on:
-  push:
-    branches:
-      - main
-  pull_request:
+name: Theme deploy
+
+on: [push]
+
 jobs:
   deploy:
     name: Deploy
@@ -13,13 +11,18 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'npm'
-      - name: Install npm dependencies
-        run: npm install
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1
+          bundler: 'latest'
+      - name: Install Shopify CLI
+        run: npm install -g @shopify/cli @shopify/theme
       - name: Deploy
         env:
-          # Token from the Partner Dashboard
-          SHOPIFY_CLI_PARTNERS_TOKEN: atkn_083cbcb37423cf925e9c0ca75ee58e15848f3ba2490a6230077a9a44c0814286
-          # .env content after a deploy
-          SHOPIFY_API_KEY: 88dc9ed58605b4df2eb9f0abfd262f38
-        run: npm run deploy
+          # Store URL, like your-store.myshopify.com
+          SHOPIFY_FLAG_STORE: '${{SHOPIFY_STORE }}'
+          # Password generated from Theme Access app
+          SHOPIFY_CLI_THEME_TOKEN: ${{SHOPIFY_CLI_THEME_TOKEN }}
+          SHOPIFY_CLI_TTY: 0
+        run: shopify theme push --path C:\harnish\Shopify-gitlab\shopify-new-account-1\shopify-new --theme My-Car-Store
+
