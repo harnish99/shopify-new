@@ -20,9 +20,9 @@ jobs:
       - name: Deploy
         env:
           # Store URL, like your-store.myshopify.com
-          SHOPIFY_FLAG_STORE: '${{SHOPIFY_STORE }}'
+          SHOPIFY_FLAG_STORE: "$SHOPIFY_STORE"
           # Password generated from Theme Access app
-          SHOPIFY_CLI_THEME_TOKEN: ${{SHOPIFY_CLI_THEME_TOKEN }}
+          SHOPIFY_CLI_THEME_TOKEN: "$SHOPIFY_CLI_THEME_TOKEN"
           SHOPIFY_CLI_TTY: 0
         run: shopify theme push --path C:\harnish\Shopify-gitlab\shopify-new-account-1\shopify-new --theme My-Car-Store
 
