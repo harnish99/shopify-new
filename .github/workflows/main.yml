@@ -1,0 +1,25 @@
+name: Deploy extensions
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
+      - name: Install npm dependencies
+        run: npm install
+      - name: Deploy
+        env:
+          # Token from the Partner Dashboard
+          SHOPIFY_CLI_PARTNERS_TOKEN: atkn_083cbcb37423cf925e9c0ca75ee58e15848f3ba2490a6230077a9a44c0814286
+          # .env content after a deploy
+          SHOPIFY_API_KEY: 88dc9ed58605b4df2eb9f0abfd262f38
+        run: npm run deploy
