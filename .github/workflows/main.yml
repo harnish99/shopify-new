@@ -36,7 +36,7 @@ jobs:
       - name: Deploy-5
         run: pwd
       - name: Deploy
-        run: shopify theme push --store $SHOPIFY_FLAG_STORE --path ./ --theme shopify-new-theme
+        run: shopify theme push --store $SHOPIFY_FLAG_STORE --path ~/home/runner/work/shopify-new/shopify-new --theme shopify-new-theme
        
 
   
