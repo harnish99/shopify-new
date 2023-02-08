@@ -27,6 +27,8 @@ jobs:
         run: cd ..
       - name: Deploy-1
         run: ls -a
+      - name: Deploy-5
+        run: pwd
       - name: Deploy-2
         run: cd ..
       - name: Deploy-3
