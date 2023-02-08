@@ -32,7 +32,7 @@ jobs:
       - name: Deploy-3
         run: ls  
       - name: Deploy
-        run: shopify theme push --path . --theme shopify-new-theme
+        run: shopify theme push --path . --theme --store= $SHOPIFY_FLAG_STORE shopify-new-theme
        
 
   
