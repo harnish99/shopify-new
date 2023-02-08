@@ -24,9 +24,7 @@ jobs:
           # Password generated from Theme Access app
           SHOPIFY_CLI_THEME_TOKEN: "$SHOPIFY_CLI_THEME_TOKEN"
           SHOPIFY_CLI_TTY: 0
-        run: git init
-      - name: shopify push to repo
-        run: shopify theme push --store SHOPIFY_FLAG_STORE --password SHOPIFY_CLI_THEME_TOKEN --path . --theme My-Car-Store
+        run: git init && shopify theme push --store SHOPIFY_FLAG_STORE --password SHOPIFY_CLI_THEME_TOKEN --path . --theme My-Car-Store
        
 
   
