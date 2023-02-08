@@ -31,8 +31,8 @@ jobs:
         run: cd ..
       - name: Deploy-3
         run: ls  
-      #- name: Deploy
-      # run: shopify theme push --path ./shopify-new --theme shopify-new-theme
+      - name: Deploy
+        run: shopify theme push --path . --theme shopify-new-theme
        
 
   
