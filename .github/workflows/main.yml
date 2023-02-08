@@ -17,8 +17,6 @@ jobs:
           bundler: 'latest'
       - name: Install Shopify CLI
         run: npm install -g @shopify/cli @shopify/theme
-      - name: Initialize Git repository
-        run: git init
       - name: Deploy
         env:
           # Store URL, like your-store.myshopify.com
@@ -26,6 +24,9 @@ jobs:
           # Password generated from Theme Access app
           SHOPIFY_CLI_THEME_TOKEN: "$SHOPIFY_CLI_THEME_TOKEN"
           SHOPIFY_CLI_TTY: 0
+      - name: Initialize Git repository
+        run: git init
+      - name: shopify push to repo
         run: shopify theme push --path . --theme My-Car-Store
        
 
