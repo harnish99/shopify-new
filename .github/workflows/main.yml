@@ -22,7 +22,7 @@ jobs:
           # Store URL, like your-store.myshopify.com
           SHOPIFY_FLAG_STORE: "my-car-store1.myshopify.com/"
           # Password generated from Theme Access app
-          SHOPIFY_CLI_THEME_TOKEN: $SHOPIFY_CLI_THEME_TOKEN
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
           SHOPIFY_CLI_TTY: 0
         run: cd ..
       - name: Deploy-1
