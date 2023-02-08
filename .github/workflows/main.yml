@@ -26,7 +26,7 @@ jobs:
           SHOPIFY_CLI_TTY: 0
         run: cd ..
       - name: Deploy
-        run: ls
+        run: ls -a
       #- name: Deploy
       # run: shopify theme push --path ./shopify-new --theme shopify-new-theme
        
