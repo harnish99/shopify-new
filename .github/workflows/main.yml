@@ -24,7 +24,7 @@ jobs:
           # Password generated from Theme Access app
           SHOPIFY_CLI_THEME_TOKEN: "$SHOPIFY_CLI_THEME_TOKEN"
           SHOPIFY_CLI_TTY: 0
-        run: ls  
+        run: shopify theme push --path . --theme My-Car-Store
        
 
   
