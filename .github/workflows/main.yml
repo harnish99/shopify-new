@@ -20,7 +20,7 @@ jobs:
       - name: Deploy
         env:
           # Store URL, like your-store.myshopify.com
-          SHOPIFY_FLAG_STORE: $SHOPIFY_FLAG_STORE
+          SHOPIFY_FLAG_STORE: "https://my-car-store1.myshopify.com/"
           # Password generated from Theme Access app
           SHOPIFY_CLI_THEME_TOKEN: $SHOPIFY_CLI_THEME_TOKEN
           SHOPIFY_CLI_TTY: 0
@@ -32,7 +32,7 @@ jobs:
       - name: Deploy-3
         run: ls  
       - name: Deploy
-        run: shopify theme push --path . --theme --store=${SHOPIFY_FLAG_STORE} --theme shopify-new-theme
+        run: shopify theme push --store $SHOPIFY_FLAG_STORE --path . --theme shopify-new-theme
        
 
   
