@@ -25,8 +25,12 @@ jobs:
           SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
           SHOPIFY_CLI_TTY: 0
         run: cd ..
-      - name: Deploy
+      - name: Deploy-1
         run: ls -a
+      - name: Deploy-2
+        run: cd ..
+      - name: Deploy-3
+        run: ls  
       #- name: Deploy
       # run: shopify theme push --path ./shopify-new --theme shopify-new-theme
        
