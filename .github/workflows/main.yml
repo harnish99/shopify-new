@@ -42,6 +42,6 @@ jobs:
        # --store "$SHOPIFY_FLAG_STORE" --store={your_store_url}
        #/home/runner/work/shopify-new/shopify-new
        # WORKDIR /cloned-qt/
-       #	run: shopify theme push --path ./path/to/your/theme --theme your-theme-name-or-id
+       # run: shopify theme push --path ./path/to/your/theme --theme your-theme-name-or-id
 
   
