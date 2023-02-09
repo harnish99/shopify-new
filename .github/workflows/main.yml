@@ -24,7 +24,7 @@ jobs:
           # Password generated from Theme Access app
           SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
           SHOPIFY_CLI_TTY: 0
-      #  run: cd ..
+        run: cd ..
       #- name: Deploy-1
       #  run: ls -a
       #- name: Deploy-5
@@ -33,9 +33,9 @@ jobs:
       #  run: cd ..
       #- name: Deploy-3
       #  run: cd ..
-      #- name: Deploy-5
-      #  run: whoami
-      #- name: Deploy
+      - name: Deploy-5
+        run: whoami
+      - name: Deploy
         run: shopify theme push --store={https://my-car-store1.myshopify.com} --password ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }} --theme shopify-new-theme
        # run: shopify theme push --path /home/runner/work/shopify-new --theme your-theme-name-or-id --store "$SHOPIFY_FLAG_STORE"
        # --store "$SHOPIFY_FLAG_STORE" --store={your_store_url}
