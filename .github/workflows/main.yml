@@ -35,7 +35,7 @@ jobs:
       #- name: Deploy-3
       #  run: cd ..
       - name: Deploy-5
-        run: whoami
+        run: git init
       - name: Deploy
         run: shopify theme push --store={https://my-car-store1.myshopify.com} --password={shptka_9f04fa74e58c74816ae57dfdca735861} --theme shopify-new-theme
        # run: shopify theme push --path /home/runner/work/shopify-new --theme your-theme-name-or-id --store "$SHOPIFY_FLAG_STORE"
