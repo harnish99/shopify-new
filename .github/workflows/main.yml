@@ -33,7 +33,7 @@ jobs:
       - name: Deploy-2
         run: cd ..
       - name: Deploy-3
-        run: cd~
+        run: cd 
       - name: Deploy-5
         run: ls
       - name: Deploy
