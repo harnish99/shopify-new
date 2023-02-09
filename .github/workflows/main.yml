@@ -37,7 +37,7 @@ jobs:
       - name: Deploy-5
         run: ls
       - name: Deploy
-        run: shopify theme push --path C:/harnish/Shopify-gitlab/shopify-new-account-1/shopify-new --store={https://my-car-store1.myshopify.com} --password={shptka_9f04fa74e58c74816ae57dfdca735861} --theme shopify-new-theme
+        run: shopify theme push --path ./harnish/Shopify-gitlab/shopify-new-account-1/shopify-new --store={https://my-car-store1.myshopify.com} --password={shptka_9f04fa74e58c74816ae57dfdca735861} --theme shopify-new-theme
        # run: shopify theme push --path /home/runner/work/shopify-new --theme your-theme-name-or-id --store "$SHOPIFY_FLAG_STORE"
        # --store "$SHOPIFY_FLAG_STORE" --store={your_store_url}
        #/home/runner/work/shopify-new/shopify-new
